@@ -43,10 +43,4 @@ public class SoundManager : MonoBehaviour
     {
         PlaySound(soundsPack.winSound, Camera.main.transform.position, volumeMultiplier * 0.3f);
     }
-
-
-    public void ChangeVolume(float sliderValue)
-    {
-        volumeMultiplier = sliderValue;
-    }
 }

@@ -6,4 +6,5 @@ using UnityEngine;
 public class SoundPackSO : ScriptableObject
 {
     public AudioClip changeSymbolSound;
+    public AudioClip winSound;
 }

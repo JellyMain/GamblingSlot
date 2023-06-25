@@ -16,4 +16,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
   - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
   - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
-  coefficient: 2
+  coefficient: 4
+  freeSpins: 0

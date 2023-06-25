@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] SoundPackSO soundsPack;
+    [SerializeField] Slider volumeSlider;
+    private float volumeMultiplier = 1f;
 
     public static SoundManager Instance { get; private set; }
 
@@ -18,6 +21,11 @@ public class SoundManager : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+        volumeSlider.onValueChanged.AddListener((v) => volumeMultiplier = v);
+    }
+
 
     public void PlaySound(AudioClip sound, Vector3 position, float volume)
     {
@@ -25,15 +33,20 @@ public class SoundManager : MonoBehaviour
     }
 
 
-    public void PlaySound(AudioClip[] soundsArray, Vector3 position, float volume)
-    {
-        AudioSource.PlayClipAtPoint(soundsArray[Random.Range(0, soundsArray.Length)], position, volume);
-    }
-
-
     public void PlayChangeSymbolSound()
     {
-        PlaySound(soundsPack.changeSymbolSound, Camera.main.transform.position, 0.3f);
+        PlaySound(soundsPack.changeSymbolSound, Camera.main.transform.position, volumeMultiplier * 0.3f);
     }
 
+
+    public void PlayWinSound()
+    {
+        PlaySound(soundsPack.winSound, Camera.main.transform.position, volumeMultiplier * 0.3f);
+    }
+
+
+    public void ChangeVolume(float sliderValue)
+    {
+        volumeMultiplier = sliderValue;
+    }
 }

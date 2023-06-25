@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: SoundPack
   m_EditorClassIdentifier: 
   changeSymbolSound: {fileID: 8300000, guid: 7b1663c95a9071f43be245887091b273, type: 3}
+  winSound: {fileID: 8300000, guid: cc1fef3b26f6fc34aa431119020798cf, type: 3}

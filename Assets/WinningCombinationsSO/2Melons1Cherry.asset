@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63ff1a8eefe46d143931db3fe114f6a7, type: 3}
-  m_Name: 3Lemons
+  m_Name: 2Melons1Cherry
   m_EditorClassIdentifier: 
   winningCombiantion:
-  - {fileID: 11400000, guid: 19bbfd6de04ef484c8c00630191ab53c, type: 2}
-  - {fileID: 11400000, guid: 19bbfd6de04ef484c8c00630191ab53c, type: 2}
-  - {fileID: 11400000, guid: 19bbfd6de04ef484c8c00630191ab53c, type: 2}
-  coefficient: 12
-  freeSpins: 0
+  - {fileID: 11400000, guid: b455d216acf9ad74a8a753fb904b6de1, type: 2}
+  - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
+  - {fileID: 11400000, guid: b455d216acf9ad74a8a753fb904b6de1, type: 2}
+  coefficient: 0
+  freeSpins: 5

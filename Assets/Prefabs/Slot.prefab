@@ -90,20 +90,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleSymbols:
-  - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
-  - {fileID: 11400000, guid: 8c9d4f467162bd7419078512c7c6962e, type: 2}
   - {fileID: 11400000, guid: 19bbfd6de04ef484c8c00630191ab53c, type: 2}
-  - {fileID: 11400000, guid: b455d216acf9ad74a8a753fb904b6de1, type: 2}
   - {fileID: 11400000, guid: 9401832955847b94f883275e63f1414a, type: 2}
-  - {fileID: 11400000, guid: e0a03ec9b9ea178449d5b2c464ca936c, type: 2}
-  - {fileID: 11400000, guid: e0a03ec9b9ea178449d5b2c464ca936c, type: 2}
-  - {fileID: 11400000, guid: e0a03ec9b9ea178449d5b2c464ca936c, type: 2}
-  - {fileID: 11400000, guid: e0a03ec9b9ea178449d5b2c464ca936c, type: 2}
-  - {fileID: 11400000, guid: e0a03ec9b9ea178449d5b2c464ca936c, type: 2}
-  - {fileID: 11400000, guid: e0a03ec9b9ea178449d5b2c464ca936c, type: 2}
-  - {fileID: 11400000, guid: e0a03ec9b9ea178449d5b2c464ca936c, type: 2}
-  - {fileID: 11400000, guid: e0a03ec9b9ea178449d5b2c464ca936c, type: 2}
-  minSpinTime: 2
-  maxSpinTime: 5
+  - {fileID: 11400000, guid: 8c9d4f467162bd7419078512c7c6962e, type: 2}
+  - {fileID: 11400000, guid: 8c9d4f467162bd7419078512c7c6962e, type: 2}
+  - {fileID: 11400000, guid: b455d216acf9ad74a8a753fb904b6de1, type: 2}
+  - {fileID: 11400000, guid: b455d216acf9ad74a8a753fb904b6de1, type: 2}
+  - {fileID: 11400000, guid: b455d216acf9ad74a8a753fb904b6de1, type: 2}
+  - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
+  - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
+  - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
+  - {fileID: 11400000, guid: 35e859215d32dde49bda533fbe84ef15, type: 2}
+  spinTime: 2
   timeBetweenSymbolChange: 0.05
-  isSpinning: 0
+  slotSprite: {fileID: 4882486675451519613}

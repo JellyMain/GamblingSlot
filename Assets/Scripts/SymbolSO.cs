@@ -6,5 +6,4 @@ using UnityEngine;
 public class SymbolSO : ScriptableObject
 {
     public Sprite symbolSprite;
-    public int index;
 }

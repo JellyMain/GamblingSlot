@@ -7,11 +7,14 @@ using System.Linq;
 public class SlotMachine : MonoBehaviour
 {
     public static Action OnSlotsSpinned;
-    public static Action<float> OnWinCombination;
+    public static Action<int> OnWinCombinationFreeSpins;
+    public static Action<float> OnWinCombinationBalance;
+
     [SerializeField] Slot[] slots;
     [SerializeField] WinningCombinationsSO[] winningCombinations;
     private SymbolSO[] currentCombination;
     private int slotsSpinned = 0;
+    private bool isSpinning = false;
 
 
     private void Start()
@@ -37,13 +40,18 @@ public class SlotMachine : MonoBehaviour
         }
     }
 
+
     public void SpinAllSlots()
     {
-        foreach (Slot slot in slots)
+        if (!isSpinning)
         {
-            slot.StartSpinning();
+            isSpinning = true;
+            foreach (Slot slot in slots)
+            {
+                slot.StartSpinning();
+            }
+            OnSlotsSpinned?.Invoke();
         }
-        OnSlotsSpinned?.Invoke();
     }
 
 
@@ -55,9 +63,11 @@ public class SlotMachine : MonoBehaviour
         {
             CheckCombinations();
             slotsSpinned = 0;
+            isSpinning = false;
         }
 
     }
+
 
     private void CheckCombinations()
     {
@@ -65,8 +75,16 @@ public class SlotMachine : MonoBehaviour
         {
             if (currentCombination.SequenceEqual(combination.winningCombiantion))
             {
-                OnWinCombination?.Invoke(combination.coefficient);
-                Debug.Log("WOOOOOOOOOOOOOOOOOON");
+                if (combination.freeSpins > 0)
+                {
+                    OnWinCombinationFreeSpins?.Invoke(combination.freeSpins);
+                    SoundManager.Instance.PlayWinSound();
+                }
+                else
+                {
+                    OnWinCombinationBalance?.Invoke(combination.coefficient);
+                    SoundManager.Instance.PlayWinSound();
+                }
             }
 
         }

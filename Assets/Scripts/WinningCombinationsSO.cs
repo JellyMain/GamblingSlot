@@ -7,4 +7,5 @@ public class WinningCombinationsSO : ScriptableObject
 {
     public SymbolSO[] winningCombiantion;
     public float coefficient;
+    public int freeSpins;
 }

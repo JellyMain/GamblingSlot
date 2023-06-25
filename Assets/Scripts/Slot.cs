@@ -9,18 +9,12 @@ public class Slot : MonoBehaviour
     public Action<SymbolSO> OnSpinEnded;
 
     [SerializeField] SymbolSO[] possibleSymbols;
-    [SerializeField] float minSpinTime = 2f;
-    [SerializeField] float maxSpinTime = 5f;
+    [SerializeField] float spinTime = 2f;
     [SerializeField] float timeBetweenSymbolChange = 0.1f;
-    private Image slotSprite;
+    [SerializeField] Image slotSprite;
     private SymbolSO currentSymbol;
     private bool isSpinning = false;
 
-
-    private void Awake()
-    {
-        slotSprite = GetComponent<Image>();
-    }
 
     private int GetRandomArrayElement()
     {
@@ -60,7 +54,7 @@ public class Slot : MonoBehaviour
         if (!isSpinning)
         {
             isSpinning = true;
-            float endTime = Time.time + UnityEngine.Random.Range(minSpinTime, maxSpinTime);
+            float endTime = Time.time + spinTime;
 
             while (endTime > Time.time)
             {
